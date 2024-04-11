@@ -1,0 +1,38 @@
+@import "_variables";
+@import "_global";
+
+header {
+    #logo {
+        display: flex;
+        justify-content: center;
+        background-color: $white;
+        box-shadow: 0px 2px 4px 0px $shadow;
+
+        img {
+            width: 162px;
+            margin: 19px 0px;
+        }
+    }
+
+    .location {
+
+        text-align: center;
+        background-color: #EAEAEA;
+        padding: 16px 0px 15px 55px;
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+        i {
+            margin: 0px 10px 0px 6px;
+            color: $gray-dark;
+        }
+
+        input {
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: $gray-dark;
+        }
+    }
+}
