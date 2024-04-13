@@ -65,6 +65,72 @@ header {
         font-size: 16px;
         font-weight: 500;
         border: none;
+        cursor: pointer;
         margin: 20px 0px 50px 5px;
+    }
+}
+
+/**** section-fonctionnement ****/
+.main-container {
+    #fonctionnement {
+        background-color: $white;
+
+        .container {
+            padding: 50px 20px;
+        }
+    }
+
+    #detail {
+        @extend %flex-column;
+        padding: 0 0 50px 12px;     
+
+        article {
+            @extend %flex-center;
+            justify-content: unset;
+            align-items: center;
+            padding: 25px;
+            background: #F6F6F6;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px $shadow;
+
+            i {
+                margin: 0px 12px;
+                color: #7E7E7E;
+                font-size: 19px;
+            }
+
+            p {
+                font-weight: 500;
+                margin-left: 15px;
+            }
+
+        }
+
+        article:hover {
+            i {
+                color: $primary;
+            }
+        }
+
+        div {
+            position: relative;
+            margin-top: 25px;     
+            text-align: center;       
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -12px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: $primary;
+            color: $white;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
     }
 }
