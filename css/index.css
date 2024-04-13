@@ -89,7 +89,7 @@ header .location input {
 .main-container #detail article {
   justify-content: unset;
   align-items: center;
-  padding: 25px;
+  padding: 25px 20px 25px 20px;
   background: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1450980392);
@@ -101,7 +101,7 @@ header .location input {
 }
 .main-container #detail article p {
   font-weight: 500;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .main-container #detail article:hover i {
   color: #9356DC;
