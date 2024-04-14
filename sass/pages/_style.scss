@@ -16,6 +16,7 @@ header {
     }
 
     .location {
+        position: relative;
         text-align: center;
         background-color: #EAEAEA;
         padding: 16px 0px 15px 55px;
@@ -74,15 +75,11 @@ header {
 .main-container {
     #fonctionnement {
         background-color: $white;
-
-        .container {
-            padding: 50px 20px;
-        }
     }
 
     #detail {
         @extend %flex-column;
-        padding: 0 0 50px 12px;     
+        padding: 0 0 0 12px;     
 
         article {
             @extend %flex-center;
@@ -132,5 +129,9 @@ header {
             font-weight: 500;
         }
 
+    }
+    
+    #card-container {
+        margin: 20px 0 20px 0;
     }
 }
