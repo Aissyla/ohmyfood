@@ -185,4 +185,29 @@ header .location input {
   font-size: 22px;
 }
 
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 22px 25px;
+}
+footer h3 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-top: 5px;
+}
+footer ul li i {
+  font-size: 13px;
+}
+footer ul li i {
+  margin-right: 12px;
+}
+
 /*# sourceMappingURL=index.css.map */
