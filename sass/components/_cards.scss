@@ -27,6 +27,10 @@
         top: 25px; 
         left: 82%; 
         transform: translate(-50%, -50%); 
+
+        @media screen and (min-width: 1024px) {
+            left: 88%;
+        }
     }
     .card__content{
         display: flex;
