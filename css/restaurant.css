@@ -1,0 +1,203 @@
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main #btn {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+header {
+  height: 63px;
+  align-items: center;
+}
+header #logo {
+  font-family: Shrikhand;
+  font-size: 30px;
+}
+header #return {
+  position: absolute;
+  color: #353535;
+  font-size: 18px;
+  left: 25px;
+}
+
+main .banner img {
+  width: 100%;
+  object-fit: cover;
+  height: 260px;
+}
+main #background {
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -50px;
+  padding: 30px 10px;
+}
+main #background .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+main #background .title-container h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+}
+main #background .title-container .heart {
+  position: relative;
+  margin-right: 20px;
+}
+main #background .title-container .heart .fa-regular {
+  font-size: 22px;
+}
+main #btn {
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 40px;
+}
+main #btn button {
+  width: 186px;
+  margin: 0;
+}
+main .cards-restau {
+  margin-top: 20px;
+}
+main .cards-restau h2 {
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  text-transform: uppercase;
+}
+main .cards-restau .card-restau {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  margin: 15px 0px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+}
+main .cards-restau .card-restau h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+main .cards-restau .card-restau .card-content {
+  margin: 10px 0px 10px 10px;
+}
+main .cards-restau .card-restau .card-content h4 {
+  font-size: 15.04px;
+  font-weight: 300;
+}
+main .cards-restau .card-restau .card-price {
+  margin-top: 25px;
+}
+main .cards-restau .card-restau .card-price span {
+  font-size: 15.04px;
+  font-weight: 700;
+  padding: 0px 10px 0px 0px;
+}
+main .cards-restau .card-restau .card-anim {
+  display: none;
+}
+
+button {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: #FFFFFF;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0px 50px 5px;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 22px 25px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 60px 20px 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 60px 50px 25px;
+  }
+}
+footer h3 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  footer h3 {
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
+}
+footer ul {
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+  }
+  footer ul li:nth-child(3) {
+    margin-left: 30px;
+  }
+}
+footer ul li {
+  margin-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  footer ul li {
+    margin-right: 10px;
+  }
+}
+footer ul li i {
+  font-size: 13px;
+  margin-right: 12px;
+}
+
+/*# sourceMappingURL=restaurant.css.map */

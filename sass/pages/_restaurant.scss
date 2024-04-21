@@ -1,3 +1,121 @@
-@import "pages/_style";
-@import "components/cards";
-@import "layout/footer";
+@import "./../_/_global";
+@import "./../_/_variables";
+@import "./../_/_placeholders";
+
+body {
+    background-color: $white;
+}
+
+header {
+    height: 63px;
+    @extend %flex-center;
+    align-items: center;
+    #logo {
+        font-family: Shrikhand;
+        font-size: 30px;
+    }
+    #return {
+        position: absolute;
+        color: #353535;
+        font-size: 18px;
+        left: 25px;
+    }
+}
+
+main {
+
+    .banner {
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 260px;
+        }
+    }
+
+    #background {
+        border-radius: 40px 40px 0 0;
+        background-color: #f6f6f6;
+        position: relative;
+        margin-top: -50px;
+        padding: 30px 10px;
+
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            h1 {
+                font-family: Shrikhand;
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .heart {
+                position: relative;
+                margin-right: 20px;
+                .fa-regular{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    #btn {
+        @extend %flex-column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 40px;
+        button{
+            width: 186px;
+            margin: 0;
+        }
+    }
+
+    .cards-restau {
+        margin-top: 20px;
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+            border-bottom: 3px solid #99e2d0;
+            width: 40px;
+            text-transform: uppercase;
+        }
+        .card-restau {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $white;
+            margin: 15px 0px;
+            box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
+            border-radius: 15px;
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            .card-content {
+                margin: 10px 0px 10px 10px;
+                h4 {
+                    font-size: 15.04px;
+                    font-weight: 300;
+                }
+            }
+            .card-price{
+                margin-top: 25px;
+                span {
+                    font-size: 15.04px;
+                    font-weight: 700;
+                    padding: 0px 10px 0px 0px;
+                }
+            }
+            .card-anim{
+                    // background-color: #99e2d0;
+                    // color: $white;
+                    // font-size: 20px;
+                    // padding: 23px 20px;
+                    // border-radius: 0 15px 15px 0;
+                    display: none;
+                    
+            }
+        }
+    }
+}
