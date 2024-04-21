@@ -95,7 +95,7 @@ main #background .title-container {
 }
 main #background .title-container h1 {
   font-family: Shrikhand;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 400;
 }
 @media screen and (min-width: 1024px) {
