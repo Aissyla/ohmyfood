@@ -29,6 +29,10 @@ main {
             width: 100%;
             object-fit: cover;
             height: 260px;
+
+            @media screen and (min-width: 768px) {
+                height: 360px;    
+            }
         }
     }
 
@@ -39,15 +43,38 @@ main {
         margin-top: -50px;
         padding: 30px 10px;
 
+        @media screen and (min-width: 768px) {
+            width: 90%;
+            margin-left: 5%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 80%;
+            margin-left: 10%;
+            
+            .main-container {
+                width: 60%;
+                margin: auto;
+            }
+        }
+
         .title-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 18px;
+
+            @media screen and (min-width: 1024px) {
+                justify-content: center;
+            }
             h1 {
                 font-family: Shrikhand;
                 font-size: 28px;
                 font-weight: 400;
+
+                @media screen and (min-width: 1024px) {
+                    margin-right: 20px;
+                }
             }
             .heart {
                 position: relative;

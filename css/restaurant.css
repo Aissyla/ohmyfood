@@ -54,6 +54,11 @@ main .banner img {
   object-fit: cover;
   height: 260px;
 }
+@media screen and (min-width: 768px) {
+  main .banner img {
+    height: 360px;
+  }
+}
 main #background {
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
@@ -61,16 +66,42 @@ main #background {
   margin-top: -50px;
   padding: 30px 10px;
 }
+@media screen and (min-width: 768px) {
+  main #background {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main #background {
+    width: 80%;
+    margin-left: 10%;
+  }
+  main #background .main-container {
+    width: 60%;
+    margin: auto;
+  }
+}
 main #background .title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
 }
+@media screen and (min-width: 1024px) {
+  main #background .title-container {
+    justify-content: center;
+  }
+}
 main #background .title-container h1 {
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  main #background .title-container h1 {
+    margin-right: 20px;
+  }
 }
 main #background .title-container .heart {
   position: relative;
