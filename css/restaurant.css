@@ -104,11 +104,25 @@ main #background .title-container h1 {
   }
 }
 main #background .title-container .heart {
-  position: relative;
   margin-right: 20px;
-}
-main #background .title-container .heart .fa-regular {
+  cursor: pointer;
   font-size: 22px;
+}
+main #background .title-container .heart .menu-liked--outline {
+  position: absolute;
+  margin-top: 2px;
+}
+main #background .title-container .heart .menu-liked--outline:before {
+  background-color: white;
+}
+main #background .title-container .heart:active .menu-liked--outline {
+  opacity: 0;
+}
+main #background .title-container .heart:active .menu-liked--solid {
+  background: linear-gradient(160deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 main #btn {
   flex-wrap: wrap;
@@ -163,7 +177,7 @@ main .cards-restau .card-restau .card-anim {
 }
 
 button {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, #9356dc, #ff79da);
   color: #FFFFFF;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   width: 218px;
@@ -174,6 +188,11 @@ button {
   border: none;
   cursor: pointer;
   margin: 20px 0px 50px 5px;
+}
+
+button:hover {
+  opacity: 0.83;
+  transition: 0.5s;
 }
 
 footer {

@@ -76,11 +76,31 @@ main {
                     margin-right: 20px;
                 }
             }
+
             .heart {
-                position: relative;
                 margin-right: 20px;
-                .fa-regular{
-                    font-size: 22px;
+                cursor: pointer;
+                font-size: 22px;
+                
+                .menu-liked--outline {
+                    position: absolute;
+                    margin-top: 2px;
+                }
+                
+                .menu-liked--outline:before {
+                    background-color: white;
+                }
+            
+                &:active {
+                    .menu-liked--outline {
+                        opacity: 0;
+                    }
+                    .menu-liked--solid {
+                        background: linear-gradient(160deg, #9356dc 0%, #ff79da 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        opacity: 1;
+                    }
                 }
             }
         }
