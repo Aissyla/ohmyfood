@@ -245,6 +245,7 @@ header .location input::placeholder {
 }
 .card .card__content .heart:active .menu-liked--solid {
   background: linear-gradient(160deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
