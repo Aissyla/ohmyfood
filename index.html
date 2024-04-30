@@ -15,6 +15,17 @@
 
     <body>
 
+        <div class="loader">
+            <p class="loader__title">ohmyfood</p>
+            <div class="loader__stagger">
+              <div class="loader__point"></div>
+              <div class="loader__point"></div>
+              <div class="loader__point"></div>
+              <div class="loader__point"></div>
+              <div class="loader__point"></div>
+            </div>
+        </div>
+
         <header>
             <div id="logo">
                 <img src="./assets/logo/ohmyfood.png" alt="Logo Ohmyfood">
@@ -78,10 +89,14 @@
                                         <h3 class="card-title">La palette du goût</h3>
                                         <p class="card-subtitle">Ménilmontant</p>
                                     </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart like menu-liked--outline"></i>
-                                        <i class="fa-solid fa-heart like menu-liked--solid"></i>
-                                    </div>
+                                    <form class="like-form">
+                                        <input type="checkbox" id="like_palette-du-gout" name="like_palette-du-gout" class="like_button" value="favorite">
+                                        <label for="like_palette-du-gout" class="fav-label">
+                                          <i class="fa-solid fa-heart"></i>
+                                          <i class="fa-regular fa-heart"></i>
+                                          <span class="sr-only">Ajouter aux favoris</span>
+                                        </label>
+                                    </form>
                                 </div>
                             </article>
                         </a>
@@ -98,10 +113,14 @@
                                         <h3>La note enchantée</h3>
                                         <p>Charonne</p>
                                     </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart like menu-liked--outline"></i>
-                                        <i class="fa-solid fa-heart like menu-liked--solid"></i>
-                                    </div>
+                                    <form class="like-form">
+                                        <input type="checkbox" id="like_note-enchantee" name="like_note-enchantee" class="like_button" value="favorite">
+                                        <label for="like_note-enchantee" class="fav-label">
+                                          <i class="fa-solid fa-heart"></i>
+                                          <i class="fa-regular fa-heart"></i>
+                                          <span class="sr-only">Ajouter aux favoris</span>
+                                        </label>
+                                    </form>
                                 </div>
                             </article>
                         </a>
@@ -117,10 +136,14 @@
                                         <h3>À la française</h3>
                                         <p>Cité Rouge</p>
                                     </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart like menu-liked--outline"></i>
-                                        <i class="fa-solid fa-heart like menu-liked--solid"></i>
-                                    </div>
+                                    <form class="like-form">
+                                        <input type="checkbox" id="like_a-la-francaise" name="like_a-la-francaise" class="like_button" value="favorite">
+                                        <label for="like_a-la-francaise" class="fav-label">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span class="sr-only">Ajouter au favoris</span>
+                                        </label>
+                                    </form>
                                 </div>
                             </article>
                         </a>
@@ -135,10 +158,14 @@
                                         <h3>Le délice des sens</h3>
                                         <p>Folie-Méricourt</p>
                                     </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart like menu-liked--outline"></i>
-                                        <i class="fa-solid fa-heart like menu-liked--solid"></i>
-                                    </div>
+                                    <form class="like-form">
+                                        <input type="checkbox" id="like_delice-des-sens" name="like_delice-des-sens" class="like_button" value="favorite">
+                                        <label for="like_delice-des-sens" class="fav-label">
+                                          <i class="fa-solid fa-heart"></i>
+                                          <i class="fa-regular fa-heart"></i>
+                                          <span class="sr-only">Ajouter aux favoris</span>
+                                        </label>
+                                    </form>
                                 </div>
                             </article>
                         </a>

@@ -229,26 +229,36 @@ header .location input::placeholder {
 .card .card__content p {
   font-weight: 300;
 }
-.card .card__content .heart {
-  cursor: pointer;
+.card .card__content .like-form {
+  position: relative;
   font-size: 22px;
 }
-.card .card__content .heart .menu-liked--outline {
-  position: absolute;
-  margin-top: 2px;
+.card .card__content .like_button {
+  display: none;
 }
-.card .card__content .heart .menu-liked--outline:before {
-  background-color: white;
+.card .card__content .like_button:not(:checked) ~ .fav-label {
+  cursor: pointer;
 }
-.card .card__content .heart:active .menu-liked--outline {
-  opacity: 0;
+.card .card__content .like_button:not(:checked) ~ .fav-label .fa-solid {
+  display: none;
 }
-.card .card__content .heart:active .menu-liked--solid {
-  background: linear-gradient(160deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
+.card .card__content .like_button:not(:checked) ~ .fav-label .fa-regular {
+  display: inline-block;
+}
+.card .card__content .like_button:checked ~ .fav-label {
+  cursor: pointer;
+}
+.card .card__content .like_button:checked ~ .fav-label .fa-solid {
+  display: inline-block;
+}
+.card .card__content .like_button:checked ~ .fav-label .fa-regular {
+  display: none;
+}
+.card .card__content .fa-heart.fa-solid {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
+  background-clip: text;
+  color: transparent;
 }
 
 footer {
@@ -304,6 +314,87 @@ footer ul li {
 footer ul li i {
   font-size: 13px;
   margin-right: 12px;
+}
+
+@keyframes hideLoader {
+  0% {
+    z-index: 5;
+    opacity: 1;
+  }
+  70% {
+    z-index: 5;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  animation: hideLoader 3s ease forwards;
+}
+.loader__title {
+  font-family: Shrikhand;
+  color: #FFFFFF;
+  width: 80%;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.loader__stagger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.loader__point {
+  background-color: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  opacity: 0.3;
+  animation-name: loading;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 6;
+}
+.loader__point:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.loader__point:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.loader__point:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+.loader__point:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.loader__point:nth-of-type(5) {
+  animation-delay: 1s;
 }
 
 /*# sourceMappingURL=index.css.map */

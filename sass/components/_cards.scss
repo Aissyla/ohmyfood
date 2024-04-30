@@ -46,32 +46,41 @@
             font-weight: 300;
         }
 
-        .heart {
-            cursor: pointer;
+        .like-form {
+            position: relative;
             font-size: 22px;
-            
-            .menu-liked--outline {
-                position: absolute;
-                margin-top: 2px;
-            }
-            
-            .menu-liked--outline:before {
-                background-color: white;
-            }
-        
-            &:active {
-                .menu-liked--outline {
-                    opacity: 0;
+        }
+          
+        .like_button {
+            display: none;
+            &:not(:checked) ~ .fav-label {
+                cursor: pointer;
+                & .fa-solid {
+                    display: none;
                 }
-                .menu-liked--solid {
-                    background: linear-gradient(160deg, #9356dc 0%, #ff79da 100%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    opacity: 1;
+                & .fa-regular {
+                    display: inline-block;
                 }
             }
-        }  
+            &:checked ~ .fav-label {
+                cursor: pointer;
+                & .fa-solid {
+                    display: inline-block;
+                }
+                & .fa-regular {
+                    display: none;
+                }
+            }
+        }
+          
+        .fa-heart {
+            &.fa-solid {
+                background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        } 
 
     }
 }
