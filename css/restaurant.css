@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   padding: 0px;
@@ -122,37 +123,6 @@ main #background .title-container h1 {
     margin-right: 20px;
   }
 }
-main #background .title-container .like-form {
-  position: relative;
-  font-size: 22px;
-}
-main #background .title-container .like_button {
-  display: none;
-}
-main #background .title-container .like_button:not(:checked) ~ .fav-label {
-  cursor: pointer;
-}
-main #background .title-container .like_button:not(:checked) ~ .fav-label .fa-solid {
-  display: none;
-}
-main #background .title-container .like_button:not(:checked) ~ .fav-label .fa-regular {
-  display: inline-block;
-}
-main #background .title-container .like_button:checked ~ .fav-label {
-  cursor: pointer;
-}
-main #background .title-container .like_button:checked ~ .fav-label .fa-solid {
-  display: inline-block;
-}
-main #background .title-container .like_button:checked ~ .fav-label .fa-regular {
-  display: none;
-}
-main #background .title-container .fa-heart.fa-solid {
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 main #btn {
   flex-wrap: wrap;
   align-content: center;
@@ -174,6 +144,7 @@ main .cards-restau h2 {
   animation: fadeIn_h2 300ms ease-in-out;
 }
 main .cards-restau .card-restau {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,20 +166,91 @@ main .cards-restau .card-restau .card-content h4 {
   font-size: 15.04px;
   font-weight: 300;
 }
-main .cards-restau .card-restau .card-price {
-  margin-top: 25px;
+main .cards-restau .card-restau .card-animation-container {
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
 }
-main .cards-restau .card-restau .card-price span {
+main .cards-restau .card-restau .card-animation-container .card-price {
+  margin: 25px 0 0 auto;
+}
+main .cards-restau .card-restau .card-animation-container .card-price span {
   font-size: 15.04px;
   font-weight: 700;
   padding: 0px 10px 0px 0px;
+  margin-left: 20px;
 }
-main .cards-restau .card-restau .card-anim {
-  display: none;
+main .cards-restau .card-restau .card-animation-container .card-anim {
+  display: flex;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 23px 20px;
+  border-radius: 0 15px 15px 0;
+}
+main .cards-restau .card-restau .card-animation-container .card-anim span {
+  background-color: #FFFFFF;
+  color: #99E2D0;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+main .cards-restau .card-restau .card-price, main .cards-restau .card-restau .card-anim {
+  opacity: 1;
+  transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
+}
+main .cards-restau .card-restau .selector__label {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 main .cards-restau h2, main .cards-restau .card-restau {
   animation-fill-mode: both;
   animation-delay: calc((var(--anim-order) - 1) * 200ms);
+}
+
+.like-form {
+  position: relative;
+  font-size: 22px;
+}
+
+.like_button {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label {
+  cursor: pointer;
+}
+.like_button:not(:checked) ~ .fav-label .fa-solid {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label .fa-regular {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label {
+  cursor: pointer;
+}
+.like_button:checked ~ .fav-label .fa-solid {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label .fa-regular {
+  display: none;
+}
+
+.fa-heart.fa-solid {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.selector:not(:checked) + .card-restau .card-animation-container .card-price,
+.selector:not(:checked) + .card-restau .card-animation-container .card-anim {
+  transform: translateX(100%); /* Déplacer la carte animée en dehors de la vue */
 }
 
 button {
@@ -228,6 +270,7 @@ button {
 button:hover {
   opacity: 0.83;
   transition: 0.5s;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 footer {

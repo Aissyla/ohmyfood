@@ -1,0 +1,4 @@
+.selector:not(:checked) + .card-restau .card-animation-container .card-price,
+.selector:not(:checked) + .card-restau .card-animation-container .card-anim {
+    transform: translateX(100%); /* Déplacer la carte animée en dehors de la vue */
+}

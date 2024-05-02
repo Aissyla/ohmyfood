@@ -1,0 +1,35 @@
+.like-form {
+    position: relative;
+    font-size: 22px;
+}
+  
+.like_button {
+    display: none;
+    &:not(:checked) ~ .fav-label {
+        cursor: pointer;
+        & .fa-solid {
+            display: none;
+        }
+        & .fa-regular {
+            display: inline-block;
+        }
+    }
+    &:checked ~ .fav-label {
+        cursor: pointer;
+        & .fa-solid {
+            display: inline-block;
+        }
+        & .fa-regular {
+            display: none;
+        }
+    }
+}
+  
+.fa-heart {
+    &.fa-solid {
+        background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+} 

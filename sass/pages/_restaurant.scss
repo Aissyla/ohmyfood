@@ -26,19 +26,6 @@
 $animDuration: 300ms;
 $intervalBetween2AnimationStarting: 200ms;
 
-// .cards-restau {
-//     &:checked + .card-restau {
-//         .card-content .card-price, .card-anim  {
-//             transform: translateX(0);
-//         }
-//     }
-//     &:not(:checked) + .card-restau {
-//         .card-content .card-price, .card-anim  {
-//             transform: translateX(59px);
-//         }
-//     }
-// }
-
 body {
     background-color: $white;
 }
@@ -113,42 +100,6 @@ main {
                     margin-right: 20px;
                 }
             }
-
-            .like-form {
-                position: relative;
-                font-size: 22px;
-            }
-              
-            .like_button {
-                display: none;
-                &:not(:checked) ~ .fav-label {
-                    cursor: pointer;
-                    & .fa-solid {
-                        display: none;
-                    }
-                    & .fa-regular {
-                        display: inline-block;
-                    }
-                }
-                &:checked ~ .fav-label {
-                    cursor: pointer;
-                    & .fa-solid {
-                        display: inline-block;
-                    }
-                    & .fa-regular {
-                        display: none;
-                    }
-                }
-            }
-              
-            .fa-heart {
-                &.fa-solid {
-                    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    color: transparent;
-                }
-            }
         }
     }
 
@@ -174,6 +125,7 @@ main {
             animation: fadeIn_h2 #{$animDuration} ease-in-out;
         }
         .card-restau {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -194,27 +146,52 @@ main {
                     font-weight: 300;
                 }
             }
-            .card-price{
-                margin-top: 25px;
-                span {
-                    font-size: 15.04px;
-                    font-weight: 700;
-                    padding: 0px 10px 0px 0px;
+
+            .card-animation-container {
+                right: 0;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
+                .card-price{
+                    margin: 25px 0 0 auto;
+                    span {
+                        font-size: 15.04px;
+                        font-weight: 700;
+                        padding: 0px 10px 0px 0px;
+                        margin-left: 20px;
+                    }
+                }
+                .card-anim{
+                    display: flex;
+                    background-color: $tertiary;
+                    color: $white;
+                    font-size: 20px;
+                    padding: 23px 20px;
+                    border-radius: 0 15px 15px 0;
+                    span {
+                        background-color: $white;
+                        color: $tertiary;
+                        text-align: center;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                    }
                 }
             }
-            .card-anim{
-                // background-color: #99e2d0;
-                // color: $white;
-                // font-size: 20px;
-                // padding: 23px 20px;
-                // border-radius: 0 15px 15px 0;
-                display: none;
+
+            .card-price, .card-anim {
+                opacity: 1;
+                transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
             }
 
-            // .card-price, .card-anim {
-            //     transform: translateX(59px);
-            //     transition: transform 175ms linear;
-            // }
+            .selector__label {
+                cursor: pointer;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
         }
 
         h2, .card-restau {

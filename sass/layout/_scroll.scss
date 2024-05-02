@@ -1,0 +1,11 @@
+@keyframes scroll-loader {
+    to {
+        overflow: visible;
+    }
+}
+
+.scroll{
+    overflow: hidden;
+    animation: scroll-loader 2000ms forwards;
+    animation-delay: 2000ms;
+}

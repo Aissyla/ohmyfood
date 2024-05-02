@@ -25,9 +25,14 @@ a {
   justify-content: center;
 }
 
-.main-container #fonctionnement #detail, #reservation {
+.loader, .main-container #fonctionnement #detail, #reservation {
   display: flex;
   flex-direction: column;
+}
+
+.loader__stagger {
+  display: flex;
+  flex-direction: row;
 }
 
 /****  header  ****/
@@ -108,6 +113,7 @@ header .location input::placeholder {
 #reservation button:hover {
   opacity: 0.83;
   transition: 0.5s;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 /**** section-fonctionnement ****/
@@ -229,32 +235,35 @@ header .location input::placeholder {
 .card .card__content p {
   font-weight: 300;
 }
-.card .card__content .like-form {
+
+.like-form {
   position: relative;
   font-size: 22px;
 }
-.card .card__content .like_button {
+
+.like_button {
   display: none;
 }
-.card .card__content .like_button:not(:checked) ~ .fav-label {
+.like_button:not(:checked) ~ .fav-label {
   cursor: pointer;
 }
-.card .card__content .like_button:not(:checked) ~ .fav-label .fa-solid {
+.like_button:not(:checked) ~ .fav-label .fa-solid {
   display: none;
 }
-.card .card__content .like_button:not(:checked) ~ .fav-label .fa-regular {
+.like_button:not(:checked) ~ .fav-label .fa-regular {
   display: inline-block;
 }
-.card .card__content .like_button:checked ~ .fav-label {
+.like_button:checked ~ .fav-label {
   cursor: pointer;
 }
-.card .card__content .like_button:checked ~ .fav-label .fa-solid {
+.like_button:checked ~ .fav-label .fa-solid {
   display: inline-block;
 }
-.card .card__content .like_button:checked ~ .fav-label .fa-regular {
+.like_button:checked ~ .fav-label .fa-regular {
   display: none;
 }
-.card .card__content .fa-heart.fa-solid {
+
+.fa-heart.fa-solid {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -326,6 +335,7 @@ footer ul li i {
     opacity: 1;
   }
   100% {
+    z-index: -5;
     opacity: 0;
   }
 }
@@ -344,11 +354,11 @@ footer ul li i {
   }
 }
 .loader {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -364,8 +374,6 @@ footer ul li i {
   margin-bottom: 20px;
 }
 .loader__stagger {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
@@ -395,6 +403,17 @@ footer ul li i {
 }
 .loader__point:nth-of-type(5) {
   animation-delay: 1s;
+}
+
+@keyframes scroll-loader {
+  to {
+    overflow: visible;
+  }
+}
+.scroll {
+  overflow: hidden;
+  animation: scroll-loader 2000ms forwards;
+  animation-delay: 2000ms;
 }
 
 /*# sourceMappingURL=index.css.map */
