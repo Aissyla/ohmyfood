@@ -145,6 +145,15 @@ main {
                     font-size: 15.04px;
                     font-weight: 300;
                 }
+
+                @media screen and (max-width: 450px) {
+                    h3, h4{
+                        width: 174px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
             }
 
             .card-animation-container {

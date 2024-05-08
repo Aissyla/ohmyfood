@@ -166,6 +166,14 @@ main .cards-restau .card-restau .card-content h4 {
   font-size: 15.04px;
   font-weight: 300;
 }
+@media screen and (max-width: 450px) {
+  main .cards-restau .card-restau .card-content h3, main .cards-restau .card-restau .card-content h4 {
+    width: 174px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 main .cards-restau .card-restau .card-animation-container {
   right: 0;
   display: flex;
@@ -254,7 +262,7 @@ main .cards-restau h2, main .cards-restau .card-restau {
 }
 
 button {
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   color: #FFFFFF;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   width: 218px;
