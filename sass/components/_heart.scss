@@ -1,6 +1,13 @@
 .like-form {
     position: relative;
     font-size: 22px;
+    left: 94%;
+    bottom: 55px;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    @media screen and (max-width: 320px) {
+        left: 90%;
+    }
 }
   
 .like_button {
