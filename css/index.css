@@ -263,6 +263,10 @@ main #background .title-container h1 {
     margin-right: 20px;
   }
 }
+main #background .title-container .like-form {
+  position: unset;
+  transform: unset;
+}
 main #btn {
   flex-wrap: wrap;
   align-content: center;
