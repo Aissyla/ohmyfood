@@ -40,7 +40,7 @@ $interval: 0.2;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: black;
+    background-color: $primary;
     animation: hideLoader 3s ease forwards;
     &__title {
         font-family: Shrikhand;

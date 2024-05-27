@@ -21,7 +21,7 @@ a {
   padding: 50px 20px;
 }
 
-.header-restaurant, .main-container #fonctionnement #detail article, .header-homepage #logo {
+.header-restaurant, .main-container #fonctionnement #detail .explication, .header-homepage #logo {
   display: flex;
   justify-content: center;
 }
@@ -110,12 +110,12 @@ a {
   .main-container #fonctionnement #detail {
     flex-direction: row;
   }
-  .main-container #fonctionnement #detail div {
+  .main-container #fonctionnement #detail .container-detail {
     width: 100%;
     padding-right: 40px;
   }
 }
-.main-container #fonctionnement #detail article {
+.main-container #fonctionnement #detail .explication {
   justify-content: unset;
   align-items: center;
   padding: 25px 20px 25px 20px;
@@ -123,24 +123,24 @@ a {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1450980392);
 }
-.main-container #fonctionnement #detail article i {
+.main-container #fonctionnement #detail .explication i {
   margin: 0px 12px;
   color: #7E7E7E;
   font-size: 19px;
 }
-.main-container #fonctionnement #detail article .fa--active {
+.main-container #fonctionnement #detail .explication .fa--active {
   color: #9356DC;
 }
-.main-container #fonctionnement #detail article p {
+.main-container #fonctionnement #detail .explication p {
   font-weight: 500;
   margin-left: 10px;
 }
 @media screen and (min-width: 768px) {
-  .main-container #fonctionnement #detail article p {
+  .main-container #fonctionnement #detail .explication p {
     text-align: left;
   }
 }
-.main-container #fonctionnement #detail div {
+.main-container #fonctionnement #detail .container-detail {
   position: relative;
   margin-top: 25px;
   text-align: center;
@@ -580,7 +580,7 @@ footer ul li i {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: black;
+  background-color: #9356DC;
   animation: hideLoader 3s ease forwards;
 }
 .loader__title {

@@ -86,13 +86,13 @@
             @media screen and (min-width: 768px) {
                 flex-direction: row;
 
-                div {
+                .container-detail {
                     width: 100%;
                     padding-right: 40px;
                 }
             }
 
-            article {
+            .explication {
                 @extend %flex-center;
                 justify-content: unset;
                 align-items: center;
@@ -121,7 +121,7 @@
                 }
             }
 
-            div {
+            .container-detail {
                 position: relative;
                 margin-top: 25px;     
                 text-align: center;       
